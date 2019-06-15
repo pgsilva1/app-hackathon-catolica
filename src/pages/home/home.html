@@ -1,23 +1,50 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Resumo</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <div class="row">
-    <div class="col-md-6">
-      <div style="display: block;">
-      <canvas baseChart width="300" height="400"
-                  [datasets]="lineChartData"
-                  [labels]="lineChartLabels"
-                  [options]="lineChartOptions"
-                  [colors]="lineChartColors"
-                  [legend]="lineChartLegend"
-                  [chartType]="lineChartType"
-                  (chartHover)="chartHovered($event)"
-                  (chartClick)="chartClicked($event)"></canvas>
+<ion-content class="text-center">
+  <ion-card>
+    <ion-card-header style="white-space: normal;">
+        <div class="text-center">
+            Média das Últimas Notas
+        </div>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="text-center">
+          85
       </div>
-    </div>
-  </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header style="white-space: normal;">
+      <div class="text-center">
+        Últimas Notas das Áreas de Conhecimento
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="text-center">
+        <canvas baseChart [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend"
+          [chartType]="polarAreaChartType">
+        </canvas>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header style="white-space: normal;">
+      <div class="text-center">
+        Notas dos Últimos Períodos
+      </div>
+    </ion-card-header>
+    <ion-card-content>
+      <div style="display: block">
+        <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions"
+          [legend]="barChartLegend" [chartType]="barChartType">
+        </canvas>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
