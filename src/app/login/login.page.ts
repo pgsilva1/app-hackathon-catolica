@@ -1,19 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+    selector   : 'app-login',
+    templateUrl: './login.page.html',
+    styleUrls  : ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  constructor() { 
-  }
 
-  ngOnInit() {
-  }
+    cpf: number;
+    password: string;
 
-  test(){
-    console.log("teste");
-  }
+    constructor() { }
+
+    ngOnInit() {
+    }
+
+    handleSubmit() {
+        console.log(this.cpf, this.password);
+        // this.router.navigateByUrl('/tabs')
+    }
 
 }
