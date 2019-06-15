@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="theme-dark" >
     <ion-title>Resumo</ion-title>
   </ion-navbar>
 </ion-header>
@@ -7,13 +7,24 @@
 <ion-content class="text-center">
   <ion-card>
     <ion-card-header style="white-space: normal;">
-        <div class="text-center">
-            Média das Últimas Notas
-        </div>
+      <div class="text-center">
+        Média das Últimas Notas
+      </div>
     </ion-card-header>
     <ion-card-content>
       <div class="text-center">
-          85
+        <div>
+            <div>
+              <div style="display: block">
+                <canvas baseChart
+                  [data]="doughnutChartData"
+                  [labels]="doughnutChartLabels"
+                  [chartType]="doughnutChartType"
+                  [options]="doughnutChartOptions">
+                </canvas>
+              </div>
+            </div>
+          </div>
       </div>
     </ion-card-content>
   </ion-card>
