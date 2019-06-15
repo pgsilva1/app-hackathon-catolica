@@ -11,7 +11,7 @@
     <ion-card>
       <img [src]="curso.imageUrl" height="198.33" width="auto" class="imagem" />
       <div class="card-title">{{ curso.name + ' - ' + curso.collegeName }}</div>
-      <button ion-button outline>Ver mais</button>
+      <button ion-button outline (click)="seeMore(curso)" >Ver mais</button>
       <button ion-button outline>Descontos</button>
     </ion-card>
   </div>

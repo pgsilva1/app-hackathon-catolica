@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar color="theme-dark" >
+      <ion-title>{{curso.name}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>Sobre</ion-card-header>
+    <ion-card-content>
+      {{ curso.description }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header >Profissões</ion-card-header>
+    <ion-card-content>
+      {{ curso.profissions }}
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>Vídeo</ion-card-header>
+    <ion-card-content>
+      <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+        <source [src]="curso.videoUrl" type="video/mp4" />
+       </video>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
