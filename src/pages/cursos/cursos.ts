@@ -44,5 +44,8 @@ export class CursosPage {
   seeMore(curso) {
     this.navCtrl.push("CursoPage", { curso: curso })
   }
-
+  
+  discounts(curso){
+    this.navCtrl.push("DescontosPage")
+  }
 }
