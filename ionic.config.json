@@ -1,5 +1,5 @@
 {
-  "name": "app-hackathon",
+  "name": "AppHackathon",
   "integrations": {},
-  "type": "angular"
+  "type": "ionic-angular"
 }
